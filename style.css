@@ -1,0 +1,101 @@
+:root {
+    --main-padding: 15px;
+    --bluebg: #0099ff;
+    --mainbg: #ebebeb;
+}
+
+body {
+    display: grid;
+    margin: 0;
+    grid-template: 1fr 3fr / 1fr 3fr;
+}
+
+#sidebar {
+    grid-row-start: span 2;
+    background-color: var(--bluebg);
+    color: white;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: var(--main-padding);
+}
+#sidebar > div:first-child {
+    font-size: x-large;
+}
+
+.side-content {
+    display: grid;
+    gap: 15px;
+}
+
+#header {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding: var(--main-padding);
+    gap: 25px;
+}
+#header > div:first-child {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+#header > div:first-child > span:first-child {
+    display: grid;
+    /* grid-template-columns: auto 1fr; */
+}
+#header > div:first-child > span:last-child {
+    font-weight: bold;
+}
+#header input[type="search"] {
+    border: none;
+    background-color: var(--mainbg);
+    border-radius: 25px;
+    padding: 6px;
+}
+#header input[type="search"]:focus {
+    border: none;
+    outline: none;
+}
+#header > div:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#header > div:last-child > span:first-child {
+    display: grid;
+    gap: 8px;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    font-weight: bold;
+}
+#header > div:last-child > span:first-child img {
+    grid-row-start: span 2;
+}
+#header > div:last-child > span:last-child {
+    display: flex;
+    gap: 15px;
+}
+#header button {
+    background-color: var(--bluebg);
+    color: white;
+    border-radius: 15px;
+    border: none;
+    padding: 8px;
+    width: 80px;
+}
+
+#main-content {
+    background-color: var(--mainbg);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: var(--main-padding);
+}
+
+#main-content > div:first-child{
+    grid-row-start: span 2;
+}
+
+h3 {
+    margin: 0;
+}
