@@ -43,7 +43,7 @@ body {
 
 #header {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto auto;
     padding: var(--main-padding);
     gap: 25px;
 }
@@ -61,6 +61,10 @@ body {
 }
 #header > div:first-child > span:last-child {
     font-weight: bold;
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(3, auto);
+    align-items: center;
 }
 #header input[type="search"] {
     border: none;
@@ -178,4 +182,16 @@ svg.black-icon,
 .side-content svg {
     height: 20px;
     width: auto;
+}
+
+/* Images */
+img {
+    border-radius: 50%;
+}
+#header > div:first-child img {
+    height: 35px;
+}
+
+#header > div:nth-child(2) img {
+    height: 50px;
 }
