@@ -2,7 +2,8 @@
 
 :root {
     --main-padding: 24px;
-    --bluebg: #0099ff;
+    --blue: #0099ff;
+    --darkblue: #004d80;
     --mainbg: #ebebeb;
     --yellow-shade: #ffd000;
     --regular-radius: 8px;
@@ -21,7 +22,7 @@ body {
 
 #sidebar {
     grid-row-start: span 2;
-    background-color: var(--bluebg);
+    background-color: var(--blue);
     color: white;
     font-weight: bold;
     display: grid;
@@ -48,6 +49,9 @@ body {
     gap: 18px;
     grid-template-columns: auto 1fr;
     align-items: center;
+}
+.side-content:hover {
+    background-color: #004d80;
 }
 
 #header {
@@ -111,12 +115,21 @@ body {
     justify-self: end;
 }
 #header button {
-    background-color: var(--bluebg);
+    background-color: var(--blue);
     color: white;
     border-radius: 15px;
     border: none;
     padding: 8px;
     width: 80px;
+}
+#header button:hover {
+    background-color: var(--darkblue);
+}
+#header button:active {
+    background-color: white;
+    color: var(--darkblue);
+    font-weight: bold;
+    opacity: 1;
 }
 
 #main-content {
