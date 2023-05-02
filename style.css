@@ -41,8 +41,9 @@ body {
     width: 35px;
 }
 .side-content {
+    padding-left: 8px;
     display: grid;
-    gap: 24px;
+    gap: 18px;
     grid-template-columns: auto 1fr;
     align-items: center;
 }
